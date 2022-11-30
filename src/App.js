@@ -16,7 +16,6 @@ function App() {
             <Route path="/register" element={<Register />}></Route>
             <Route path="/profile" element={<Profile />}></Route>
          </Routes>
-
          <ShowCard />
       </div>
    );
