@@ -1,3 +1,32 @@
-.navbar-menu {
-    display: block;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    font-family: Oxygen, sans-serif;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 25rem));
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem;
+
+}
+
+.card {
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgb(71, 85, 90);
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    transition: transform 200ms ease-in;
+    width: 100%;
 }
