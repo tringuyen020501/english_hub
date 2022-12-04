@@ -77,7 +77,7 @@ function Profile() {
                sx={{ marginTop: 3, width: 100 }}
                onClick={handleSave}
             >
-               Save
+               Save info
             </Button>
          </Box>
       </div>
