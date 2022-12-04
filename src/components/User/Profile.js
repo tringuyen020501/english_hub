@@ -10,6 +10,7 @@ function Profile() {
       age: "21",
       address: "da nang",
       phone: "0123214434",
+      degree: "Ielts",
    });
 
    const handleChange = (e) => {
@@ -61,6 +62,13 @@ function Profile() {
                label="phone"
                name={"phone"}
                value={info.phone}
+               onChange={handleChange}
+            />
+            <br />
+            <TextField
+               label="phone"
+               name={"phone"}
+               value={info.degree}
                onChange={handleChange}
             />
             <br />
