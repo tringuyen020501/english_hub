@@ -14,7 +14,7 @@ function Detail() {
    return (
       <div>
          <a href="/card">
-            <AiFillBackward />
+            <AiFillBackward style={{ height: "30px" }} />
          </a>
          <img
             src={"https://www.udn.vn/Portals/0/1doan%20thanh%20nien%20bk.jpg"}
