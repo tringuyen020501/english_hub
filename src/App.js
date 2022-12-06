@@ -5,6 +5,7 @@ import Login from "./components/User/Login";
 import "./App.css";
 import ShowCard from "./components/Card/ShowCard";
 import Profile from "./components/User/Profile";
+import Detail from "./components/Detail/Detail";
 
 function App() {
    return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/profile" element={<Profile />}></Route>
             <Route path="/card" element={<ShowCard />}></Route>
+            <Route path="/detail" element={<Detail />}></Route>
          </Routes>
       </div>
    );

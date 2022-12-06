@@ -26,7 +26,7 @@ function Card(props) {
             <h2 className="card__title">{props.title}</h2>
             <p className="card__description">{props.description}</p>
          </div>
-         <a className="card__btn" href="/login">
+         <a className="card__btn" href="/detail">
             View More
          </a>
       </div>

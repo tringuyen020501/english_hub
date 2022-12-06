@@ -35,7 +35,7 @@ function Profile() {
             autoComplete="off"
             marginLeft="500px"
          >
-            <Avatar>ok</Avatar>
+            <Avatar style={{ marginLeft: "130px" }}>T</Avatar>
             <TextField
                fullWidth
                sx={{ marginRight: 1 }}
