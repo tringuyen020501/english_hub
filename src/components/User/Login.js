@@ -32,7 +32,7 @@ function Login() {
             console.log(res.data.token, "res.data.token");
             if (res.data.token) {
                // setToken(res.data.token);
-               navigate("/");
+               navigate("/card");
             }
          })
          .catch((err) => console.error(err));

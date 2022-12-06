@@ -1,5 +1,4 @@
 import * as React from "react";
-import Navbar from "./components/Navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Register from "./components/User/Register";
 import Login from "./components/User/Login";
@@ -11,12 +10,11 @@ function App() {
    return (
       <div className="App">
          <Routes>
-            <Route path="/" element={<Navbar />}></Route>
+            <Route path="/" element={<Register />}></Route>
             <Route path="/login" element={<Login />}></Route>
-            <Route path="/register" element={<Register />}></Route>
             <Route path="/profile" element={<Profile />}></Route>
+            <Route path="/card" element={<ShowCard />}></Route>
          </Routes>
-         <ShowCard />
       </div>
    );
 }

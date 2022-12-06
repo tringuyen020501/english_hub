@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import { Avatar } from "@mui/material";
 
 function Profile() {
    const [info, setInfo] = useState({
@@ -12,6 +13,7 @@ function Profile() {
       phone: "0123214434",
       degree: "Ielts",
    });
+   const [image, setImage] = useState("");
 
    const handleChange = (e) => {
       setInfo((info) => ({ ...info, [e.target.name]: e.target.value }));
@@ -25,40 +27,53 @@ function Profile() {
          <Box
             component="form"
             sx={{
-               "& > :not(style)": { m: 1, width: "25ch" },
+               "& > :not(style)": { m: 1 },
+               width: 300,
+               maxWidth: "100%",
             }}
             noValidate
             autoComplete="off"
+            marginLeft="500px"
          >
+            <Avatar>ok</Avatar>
             <TextField
+               fullWidth
                sx={{ marginRight: 1 }}
                label="email"
                name={"email"}
                value={info.email}
                onChange={handleChange}
             />
+            <br />
             <TextField
+               fullWidth
                sx={{ marginRight: 1 }}
                label="name "
                name={"name"}
                value={info.name}
                onChange={handleChange}
             />
+            <br />
             <TextField
+               fullWidth
                sx={{ marginRight: 1 }}
                label="age"
                name={"age"}
                value={info.age}
                onChange={handleChange}
             />
+            <br />
             <TextField
+               fullWidth
                sx={{ marginRight: 1 }}
                label="address"
                name={"address"}
                value={info.address}
                onChange={handleChange}
             />
+            <br />
             <TextField
+               fullWidth
                label="phone"
                name={"phone"}
                value={info.phone}
@@ -66,6 +81,7 @@ function Profile() {
             />
             <br />
             <TextField
+               fullWidth
                label="phone"
                name={"phone"}
                value={info.degree}
@@ -73,11 +89,12 @@ function Profile() {
             />
             <br />
             <Button
+               fullWidth
                variant="contained"
-               sx={{ marginTop: 3, width: 100 }}
+               sx={{ marginTop: 3, width: 300 }}
                onClick={handleSave}
             >
-               Save info
+               Save
             </Button>
          </Box>
       </div>
