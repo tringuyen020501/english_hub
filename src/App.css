@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&display=swap');
 
+
 *,
 *::before,
 *::after {
@@ -29,4 +30,49 @@
     cursor: pointer;
     transition: transform 200ms ease-in;
     width: 100%;
+}
+
+@import "~rsuite/dist/rsuite.min.css";
+
+
+
+.Class {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    font-family: Industry;
+    text-align: center;
+}
+
+.Class-header {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+}
+
+.Class-logout {
+    min-height: 15vh;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.Class-customCard {
+    background-color: unset !important;
+    font-family: Industry;
+    margin-top: 10%;
+}
+
+.customCardBody {
+    margin-bottom: 20px;
+}
+
+.Class-userToggleBtn {
+    padding-right: 20px;
 }

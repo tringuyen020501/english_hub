@@ -149,11 +149,11 @@ function Register() {
                               Sign Up
                            </Button>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} marginLeft={34}>
                            <Link
                               href="login"
                               underline="none"
-                              textAlign="right"
+                              textAlign="center"
                            >
                               {"Already have an account? Sign in"}
                            </Link>

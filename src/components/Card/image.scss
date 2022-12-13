@@ -36,6 +36,8 @@
         transition: background 200ms ease-in, color 200ms ease-in;
         background-color: white;
         cursor: pointer;
+        text-decoration: none;
+        text-align: center;
     }
 
     &:hover{

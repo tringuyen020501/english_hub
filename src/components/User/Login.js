@@ -11,42 +11,52 @@ import {
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import React, { useState } from "react";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function Login() {
    const navigate = useNavigate();
    const [values, setValues] = useState({
-      email: "",
-      pass: "",
+      id: "",
+      username: "",
+      password: "",
+      role: "",
       showPass: false,
    });
+   // const [, setUser] = useContext(UserContext);
    const handleSubmit = (e) => {
       e.preventDefault();
-      axios
-         .post("https://reqres.in/api/login", {
-            email: values.email,
-            password: values.pass,
-         })
-         .then((res) => {
-            console.log(res.data.token, "res.data.token");
-            if (res.data.token) {
-               // setToken(res.data.token);
-               navigate("/");
+      var myHeaders = new Headers();
+      myHeaders.append("Cookie", "csrftoken=GgguGBOp7YuM79PBjdw8jazMIromyg4F");
+
+      // var urlencoded = new URLSearchParams();
+      // urlencoded.append("username", values.username);
+      // urlencoded.append("password", values.password);
+      // urlencoded.append("role", values.role);
+
+      var requestOptions = {
+         method: "GET",
+         headers: myHeaders,
+         // body: urlencoded,
+         redirect: "follow",
+      };
+
+      fetch("https://thanhnhan.pythonanywhere.com/accounts/", requestOptions)
+         .then((response) => {
+            if (response.ok) {
+               return response.json();
             }
+            throw Error(response.status);
          })
-         .catch((err) => console.error(err));
+         .then((result) => {
+            console.log(result);
+            // setUser(result);
+            navigate("/card");
+         })
+         .catch((error) => {
+            console.log("error", error);
+            alert("username, password are wrong");
+         });
    };
-
-   // const handleSubmit = (e) => {
-   //    e.preventDefault();
-   //    const newUser ={
-   //       email: values.email,
-   //       password: values.pass,
-
-   //    };
-   //    loginUser(newUser, dispatch, navigate);
-   // }
 
    const handlePass = () => {
       setValues({
@@ -73,18 +83,16 @@ function Login() {
                      <Grid container direction="column" spacing={2}>
                         <Grid item>
                            <TextField
-                              type="email"
+                              type="text"
                               fullWidth
-                              label="Email Address"
-                              placeholder="Email Address"
+                              label="UserName"
+                              placeholder="UserName"
                               variant="outlined"
-                              onChange={
-                                 (e) =>
-                                    setValues({
-                                       ...values,
-                                       email: e.target.value,
-                                    })
-                                 // setValues({ email: e.target.value })
+                              onChange={(e) =>
+                                 setValues({
+                                    ...values,
+                                    username: e.target.value,
+                                 })
                               }
                            />
                         </Grid>
@@ -96,13 +104,11 @@ function Login() {
                               label="Password"
                               placeholder="Password"
                               variant="outlined"
-                              onChange={
-                                 (e) =>
-                                    setValues({
-                                       ...values,
-                                       pass: e.target.value,
-                                    })
-                                 // setValues({  pass: e.target.value })
+                              onChange={(e) =>
+                                 setValues({
+                                    ...values,
+                                    password: e.target.value,
+                                 })
                               }
                               InputProps={{
                                  endAdornment: (
