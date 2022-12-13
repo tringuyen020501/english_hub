@@ -26,7 +26,7 @@ function Card(props) {
             <h2 className="card__title">{props.title}</h2>
             <p className="card__description">{props.description}</p>
          </div>
-         <a className="card__btn" href="/detail">
+         <a className="card__btn" href="/detail" textDecoration="none">
             View More
          </a>
       </div>
@@ -35,7 +35,7 @@ function Card(props) {
 
 function Navbar() {
    const [info, setInfo] = useState({
-      username: "tri nguyen",
+      username: "Thanh Nhân",
       password: "12345",
       role: "student",
       interest: "",
@@ -57,12 +57,6 @@ function Navbar() {
                   <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                      ENGLISH HUB
                   </Typography>
-                  {/* <Button color="inherit" href="/login">
-                     Login
-                  </Button>
-                  <Button color="inherit" href="/register">
-                     Register
-                  </Button> */}
                   Hi {info.username}
                   <IconButton
                      size="large"
@@ -88,55 +82,38 @@ function ShowCard() {
          <Navbar />
          <div className="wrapper">
             <Card
-               img="https://images.pexels.com/photos/14175961/pexels-photo-14175961.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-               title="NVA"
-               description="Some quick example text to build on the card title and make up
-               the bulk of the card's content."
+               img="https://cdn.fbsbx.com/v/t59.2708-21/319582625_601921225035154_6025350014020000648_n.gif?_nc_cat=103&ccb=1-7&_nc_sid=041f46&_nc_ohc=fYRFpmeB4eIAX-ysXWo&_nc_oc=AQkrQ_r7GgQJrHeaDcPbcYnco_q1IFdd7DesY0JUw7FSCTCOqkbHAAOs43LXX94f7t2tpC5URfkPY44iqGY3tKcX&_nc_ht=cdn.fbsbx.com&oh=03_AdRifiQXMjufFSYoq8yxUelIe6iW2JR-tZ8RKDCCljSXMA&oe=6399A520"
+               title="Thầy Mark Anthony Page"
+               description="Tốt nghiệp Đại Học SaintPeter College chuyên ngành Tiếng Anh và Triết Học loại ưu+ Liên tục 6 lần dành giải"
             />
 
             <Card
-               title="NVA"
-               img="https://images.pexels.com/photos/14175961/pexels-photo-14175961.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-               description="Some quick example text to build on the card title and make up
-               the bulk of the card's content."
+               title="
+               Cô TES – MARIA TERESA ADOLFO"
+               img="https://cdn.fbsbx.com/v/t59.2708-21/317399065_536449441698738_4728291993065479637_n.gif?_nc_cat=108&ccb=1-7&_nc_sid=041f46&_nc_ohc=mAJ4DjGJRJgAX-jaDvr&_nc_oc=AQl4DSLQePBYvB3OAXmYwC1YFcbp6bGf6M_j_lAABJ0OlDiK36AsV8NhKkqR-xt8E7V4CTz96bN2kYlXcklyT8eH&_nc_ht=cdn.fbsbx.com&oh=03_AdSDcUmZbVBuj_MeCBdTnX407qTq8fsDxAiRG-MhoGEfxg&oe=639A090D"
+               description="Kinh nghiệm 10 năm giảng dạy IELTS tại Hà Nội, từng đảm nhiệm vị trí Head Teacher trong 3 năm liên tiếp tại một trung tâm lớn khác ở Hà Nội."
             />
 
             <Card
-               title="NVA"
-               img="https://images.pexels.com/photos/14175961/pexels-photo-14175961.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-               description="Some quick example text to build on the card title and make up
-               the bulk of the card's content."
+               title="Thầy Lê Thành Công"
+               img="https://cdn.fbsbx.com/v/t59.2708-21/318554991_618993323311232_3710413633789004973_n.gif?_nc_cat=102&ccb=1-7&_nc_sid=041f46&_nc_ohc=ekfCEgADPQUAX9_MSVl&_nc_ht=cdn.fbsbx.com&oh=03_AdRnsQTqOPt4OfFzcFX6vIHerqrzI4RV0nNTA2SfX1CPeg&oe=6399AC38"
+               description="Tốt nghiệp loại ưu trường RMIT tại Việt Nam, chứng chỉ TESOL. Bảng điểm IELTS 7.5.Sở hữu chứng chỉ training về các modules Speaking & Writing của British Council"
             />
 
             <Card
-               img="https://images.pexels.com/photos/14175961/pexels-photo-14175961.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-               title="NVA"
-               description="Some quick example text to build on the card title and make up
-               the bulk of the card's content."
+               img="https://cdn.fbsbx.com/v/t59.2708-21/319116234_552746716314665_4197719874871388224_n.gif?_nc_cat=110&ccb=1-7&_nc_sid=041f46&_nc_ohc=MYATRaBYaWoAX-Hq978&_nc_ht=cdn.fbsbx.com&oh=03_AdQrEFzTF_4vqkk57j757ppWzNQrfPyUcBhFD28uh07gAg&oe=6399BC58"
+               title="Cô Nguyễn Minh Nhã"
+               description="Cô Nhã là một giáo viên dạy giỏi từ trình độ cơ bản đến IELTS 6.5.Chứng chỉ TESOL trường Autralian International College"
             />
             <Card
-               img="https://images.pexels.com/photos/14175961/pexels-photo-14175961.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-               title="NVA"
-               description="Some quick example text to build on the card title and make up
-               the bulk of the card's content."
+               img="https://cdn.fbsbx.com/v/t59.2708-21/318623487_3323386091242682_3014742167603199418_n.gif?_nc_cat=105&ccb=1-7&_nc_sid=041f46&_nc_ohc=ipQvaAfBydcAX_8Dgr5&_nc_ht=cdn.fbsbx.com&oh=03_AdQMYTIguyB6y4hY_gNMfMPlOaP4zgscMQptqO3Vth3M8Q&oe=6399DA2C"
+               title="Thầy James Jacob"
+               description=" Hơn 6 năm theo đuổi sự nghiệp giảng dạy Tiếng Anh tại các nước châu Á như : Trung Quốc, Hàn Quốc, Việt Nam,.. thầy luôn truyền nhiệt huyết, đam mê về ngôn ngữ đến với các học sinh của mình."
             />
             <Card
-               img="https://images.pexels.com/photos/14175961/pexels-photo-14175961.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-               title="NVA"
-               description="Some quick example text to build on the card title and make up
-               the bulk of the card's content."
-            />
-            <Card
-               img="https://images.pexels.com/photos/14175961/pexels-photo-14175961.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-               title="NVA"
-               description="Some quick example text to build on the card title and make up
-               the bulk of the card's content."
-            />
-            <Card
-               img="https://images.pexels.com/photos/14175961/pexels-photo-14175961.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load"
-               title="NVA"
-               description="Some quick example text to build on the card title and make up
-               the bulk of the card's content."
+               img="https://cdn.fbsbx.com/v/t59.2708-21/315912457_691722222399906_269023272617951005_n.gif?_nc_cat=103&ccb=1-7&_nc_sid=041f46&_nc_ohc=FZ-snLRViI8AX8_8Uez&_nc_ht=cdn.fbsbx.com&oh=03_AdSrO-l2Igl99XHZkGQq97R9B7CRgtQnigA8Up2pCQiyAg&oe=6399AB92"
+               title="Thầy Hamed Hashemian"
+               description=" Là 1 giảng viên ưu tú với 9 năm kinh nghiệm giảng dạy IELTS, 5 năm kinh nghiệm training giáo viên dạy IELTS"
             />
          </div>
       </div>

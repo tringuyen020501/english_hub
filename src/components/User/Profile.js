@@ -1,26 +1,47 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import { Avatar } from "@mui/material";
+import axios from "axios";
+// import { CgProfile } from "react-icons/cg";
+import Alert from "@mui/material/Alert";
 
 function Profile() {
-   const [info, setInfo] = useState({
-      email: "tringuyen252001@gamil.com",
-      name: "tri",
-      age: "21",
-      address: "da nang",
-      phone: "0123214434",
-      degree: "Ielts",
-   });
-   const [image, setImage] = useState("");
+   const [users, setUsers] = useState({});
+
+   useEffect(() => {
+      var myHeaders = new Headers();
+      myHeaders.append("Cookie", "csrftoken=GgguGBOp7YuM79PBjdw8jazMIromyg4F");
+
+      var requestOptions = {
+         method: "GET",
+         headers: myHeaders,
+         redirect: "follow",
+      };
+      fetch("https://thanhnhan.pythonanywhere.com/teachers/1/", requestOptions)
+         .then((response) => response.json())
+         .then((result) => {
+            setUsers(result);
+         })
+         .catch((error) => console.log("error", error));
+   }, []);
+
+   // const [image, setImage] = useState("");
 
    const handleChange = (e) => {
-      setInfo((info) => ({ ...info, [e.target.name]: e.target.value }));
+      setUsers((users) => ({ ...users, [e.target.name]: e.target.value }));
    };
 
-   const handleSave = () => {
-      console.log({ info });
+   const handleSave = async () => {
+      users.image_license = null;
+      await axios
+         .put("https://thanhnhan.pythonanywhere.com/teachers/1/", users)
+         .then((users) => {
+            alert("edit succes");
+            setUsers(...users);
+         })
+         .catch((error) => console.log("error", error));
    };
    return (
       <div>
@@ -33,24 +54,44 @@ function Profile() {
             }}
             noValidate
             autoComplete="off"
-            marginLeft="500px"
+            marginLeft="700px"
          >
-            <Avatar style={{ marginLeft: "130px" }}>T</Avatar>
+            <Avatar style={{ marginLeft: "130px" }}>P</Avatar>
+            {/* <CgProfile sx={{ width: "100px" }} />
+            Edit profile */}
             <TextField
                fullWidth
                sx={{ marginRight: 1 }}
-               label="email"
-               name={"email"}
-               value={info.email}
+               label="id"
+               name={"id"}
+               disabled
+               value={users.id || ""}
                onChange={handleChange}
             />
             <br />
             <TextField
                fullWidth
                sx={{ marginRight: 1 }}
-               label="name "
+               id="filled-multiline-flexible"
+               label="Name"
                name={"name"}
-               value={info.name}
+               multiline
+               maxRows={4}
+               value={users.name || ""}
+               onChange={handleChange}
+               variant="filled"
+            />
+            <br />
+            <TextField
+               fullWidth
+               sx={{ marginRight: 1 }}
+               id="filled-multiline-flexible"
+               label="address"
+               name={"address"}
+               multiline
+               maxRows={4}
+               variant="filled"
+               value={users.address || ""}
                onChange={handleChange}
             />
             <br />
@@ -59,24 +100,11 @@ function Profile() {
                sx={{ marginRight: 1 }}
                label="age"
                name={"age"}
-               value={info.age}
-               onChange={handleChange}
-            />
-            <br />
-            <TextField
-               fullWidth
-               sx={{ marginRight: 1 }}
-               label="address"
-               name={"address"}
-               value={info.address}
-               onChange={handleChange}
-            />
-            <br />
-            <TextField
-               fullWidth
-               label="phone"
-               name={"phone"}
-               value={info.phone}
+               value={users.age || ""}
+               id="filled-multiline-flexible"
+               multiline
+               maxRows={4}
+               variant="filled"
                onChange={handleChange}
             />
             <br />
@@ -84,7 +112,35 @@ function Profile() {
                fullWidth
                label="phone"
                name={"phone"}
-               value={info.degree}
+               value={users.phone || ""}
+               id="filled-multiline-flexible"
+               multiline
+               maxRows={4}
+               variant="filled"
+               onChange={handleChange}
+            />
+            <br />
+            <TextField
+               fullWidth
+               label="licenses"
+               name={"licenses"}
+               value={users.licenses || ""}
+               id="filled-multiline-flexible"
+               multiline
+               maxRows={4}
+               variant="filled"
+               onChange={handleChange}
+            />
+            <br />
+            <TextField
+               fullWidth
+               label="describedetail"
+               name={"describe_detail"}
+               id="filled-multiline-flexible"
+               multiline
+               maxRows={4}
+               variant="filled"
+               value={users.describe_detail || ""}
                onChange={handleChange}
             />
             <br />
