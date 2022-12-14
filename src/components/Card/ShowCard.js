@@ -82,7 +82,7 @@ function ShowCard() {
          <Navbar />
          <div className="wrapper">
             <Card
-               img="https://cdn.fbsbx.com/v/t59.2708-21/319582625_601921225035154_6025350014020000648_n.gif?_nc_cat=103&ccb=1-7&_nc_sid=041f46&_nc_ohc=fYRFpmeB4eIAX-ysXWo&_nc_oc=AQkrQ_r7GgQJrHeaDcPbcYnco_q1IFdd7DesY0JUw7FSCTCOqkbHAAOs43LXX94f7t2tpC5URfkPY44iqGY3tKcX&_nc_ht=cdn.fbsbx.com&oh=03_AdRifiQXMjufFSYoq8yxUelIe6iW2JR-tZ8RKDCCljSXMA&oe=6399A520"
+               img="https://kos.edu.vn/wp-content/uploads/2018/02/Mark.jpg"
                title="Thầy Mark Anthony Page"
                description="Tốt nghiệp Đại Học SaintPeter College chuyên ngành Tiếng Anh và Triết Học loại ưu+ Liên tục 6 lần dành giải"
             />
@@ -96,12 +96,12 @@ function ShowCard() {
 
             <Card
                title="Thầy Lê Thành Công"
-               img="https://cdn.fbsbx.com/v/t59.2708-21/318554991_618993323311232_3710413633789004973_n.gif?_nc_cat=102&ccb=1-7&_nc_sid=041f46&_nc_ohc=ekfCEgADPQUAX9_MSVl&_nc_ht=cdn.fbsbx.com&oh=03_AdRnsQTqOPt4OfFzcFX6vIHerqrzI4RV0nNTA2SfX1CPeg&oe=6399AC38"
+               img="https://kos.edu.vn/wp-content/uploads/2020/03/gv3.png"
                description="Tốt nghiệp loại ưu trường RMIT tại Việt Nam, chứng chỉ TESOL. Bảng điểm IELTS 7.5.Sở hữu chứng chỉ training về các modules Speaking & Writing của British Council"
             />
 
             <Card
-               img="https://cdn.fbsbx.com/v/t59.2708-21/319116234_552746716314665_4197719874871388224_n.gif?_nc_cat=110&ccb=1-7&_nc_sid=041f46&_nc_ohc=MYATRaBYaWoAX-Hq978&_nc_ht=cdn.fbsbx.com&oh=03_AdQrEFzTF_4vqkk57j757ppWzNQrfPyUcBhFD28uh07gAg&oe=6399BC58"
+               img="https://kos.edu.vn/wp-content/uploads/2020/03/gv4.png"
                title="Cô Nguyễn Minh Nhã"
                description="Cô Nhã là một giáo viên dạy giỏi từ trình độ cơ bản đến IELTS 6.5.Chứng chỉ TESOL trường Autralian International College"
             />
@@ -111,7 +111,7 @@ function ShowCard() {
                description=" Hơn 6 năm theo đuổi sự nghiệp giảng dạy Tiếng Anh tại các nước châu Á như : Trung Quốc, Hàn Quốc, Việt Nam,.. thầy luôn truyền nhiệt huyết, đam mê về ngôn ngữ đến với các học sinh của mình."
             />
             <Card
-               img="https://cdn.fbsbx.com/v/t59.2708-21/315912457_691722222399906_269023272617951005_n.gif?_nc_cat=103&ccb=1-7&_nc_sid=041f46&_nc_ohc=FZ-snLRViI8AX8_8Uez&_nc_ht=cdn.fbsbx.com&oh=03_AdSrO-l2Igl99XHZkGQq97R9B7CRgtQnigA8Up2pCQiyAg&oe=6399AB92"
+               img="https://kos.edu.vn/wp-content/uploads/2020/03/thay-cong.jpg"
                title="Thầy Hamed Hashemian"
                description=" Là 1 giảng viên ưu tú với 9 năm kinh nghiệm giảng dạy IELTS, 5 năm kinh nghiệm training giáo viên dạy IELTS"
             />
