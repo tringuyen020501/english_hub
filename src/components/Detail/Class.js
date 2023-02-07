@@ -7,7 +7,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { FaPencilAlt, FaPlus, FaTrashAlt } from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import { Button } from "react-bootstrap";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";

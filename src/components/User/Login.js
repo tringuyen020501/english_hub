@@ -56,7 +56,6 @@ function Login() {
       var requestOptions = {
          method: "GET",
          headers: myHeaders,
-         // body: urlencoded,
          redirect: "follow",
       };
 
@@ -68,8 +67,12 @@ function Login() {
             throw Error(response.status);
          })
          .then((result) => {
-            // console.log(result);
             setValues(result);
+            // if (result.role == "1") {
+            //    navigate("/card");
+            // } else if (result.role == "0") {
+            //    navigate("/");
+            // }
             navigate("/card");
          })
          .catch((error) => {
