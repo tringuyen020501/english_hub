@@ -95,7 +95,7 @@ function Class() {
                   sx={{ mr: 2 }}
                   href="/detail"
                >
-                  About me
+                  About
                </IconButton>
                <IconButton
                   size="large"
